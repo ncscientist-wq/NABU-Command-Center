@@ -1,0 +1,43 @@
+PHASE 2D-A04C3R2 SOUND / MUSIC STREAM PROVENANCE
+
+API:
+Installed z88dk psg.h get_psg()/set_psg(), already used by verified builds.
+
+UI cues / SOUND:
+- Existing bounded cue state machine remains on AY channel A.
+- X controls SOUND and therefore UI cue policy only.
+- UI note writes now preserve B/C mixer bits; this is the coexistence adjustment.
+- Successful navigation/open/back/etc. cue policy is otherwise unchanged.
+- Blocked dashboard or Task Manager page edges start no cue.
+- Root cause of the refresh-loop symptom: refresh_transport() is synchronous;
+  when refresh began during an active cue, service_sound() could not advance to
+  its completion path and channel-A volume remained audible during the call.
+- Correction: stop_cue() silences and resets A before refresh, before replacing
+  a cue, at cue completion, and when SOUND is turned OFF. No delay, retry,
+  transport edit, or B/C music change was introduced.
+
+MUSIC STREAM:
+- Product name: MUSIC STREAM.
+- Native implementation: original local compact AY event stream; not Internet
+  audio and unrelated to program-loading port 5816.
+- B is the unused global toggle key.
+- Cold boot default: OFF.
+- ON resumes at the next retained event; it does not restart on module open/back.
+- OFF clears the wait and silences music-owned voices without changing position.
+- Channel B carries the original 16-note optimistic command-center melody.
+- Channel C carries a calculated harmony voice from the same original events.
+- The 16-event loop has bounded period/duration arrays and no allocation.
+
+AY ownership:
+- Channel A: existing UI cues, volume register 8.
+- Channels B/C: Music Stream, volume registers 9/10.
+- Mixer writes preserve the other subsystem's channel-enable state.
+- A cue does not change music position, wait, loop, enabled state, or track ID.
+
+Accounting:
+- stream data: 48 bytes
+- runtime state: 5 bytes
+- music service: nonblocking; one bounded state step at the start of each normal
+  scheduler service iteration (and during the modal ZIP input loop)
+
+Audible quality/coexistence: NOT TESTED pending Owner MAME gate.

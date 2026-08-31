@@ -1,0 +1,90 @@
+Product:
+NABU Command Center
+
+Version:
+1.0
+
+BUILD_ID:
+NCC-SPLASH-260826-LV2
+
+000001.bin:
+59,501 bytes
+
+000001.NABU:
+59,501 bytes
+
+Byte identity:
+VERIFIED
+
+SHA-256:
+5D27DFBB3ED8DCD96AF828CECC7550EF546B07C10509E20A71FECFCF0CC89087
+
+Client source path:
+client\phase3a_live_local_weather_v0_1\NABU_COMMAND_CENTER_LIVE_LOCAL_WEATHER_v0_1
+
+Gateway path:
+gateway\phase3a_live_local_weather_v0_1\NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1
+
+Build script:
+client\phase3a_live_local_weather_v0_1\NABU_COMMAND_CENTER_LIVE_LOCAL_WEATHER_v0_1\BUILD.BAT
+
+Map/symbol/listing evidence:
+releases\v1.0\evidence\build\000001.map
+releases\v1.0\evidence\build\000001.sym
+releases\v1.0\evidence\build\000001.lis
+releases\v1.0\evidence\build\main.c.sym
+releases\v1.0\evidence\build\main.c.lis
+releases\v1.0\evidence\build\minimal_vdp_isr.asm.lis
+
+Gateway launcher:
+gateway\phase3a_live_local_weather_v0_1\NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1\START_COMMAND_CENTER_GATEWAY.BAT
+
+Gateway dependency record:
+mido==1.3.3
+
+Golden Transport:
+VERIFIED / FROZEN
+Tag ncc-transport-foundation-v1-mame-verified
+Tag ncc-transport-v0.2-reliable-64-mame-verified
+
+MAME:
+OWNER VERIFIED
+
+Physical NABU:
+OWNER VERIFIED
+
+Integrated runtime:
+OWNER VERIFIED
+
+Final endurance status:
+Golden Transport 5,000 / 5,000 bounded reads retained. No separate final integrated LV2 duration claimed.
+
+Known resource boundary:
+BSS_END $FC7A / initial SP $FF00 / 646-byte static-to-stack address-space margin
+
+Help:
+Single-page production Help. Dense multi-page Help NOT IMPLEMENTED due current resource/key-code gate.
+
+Music:
+Single production stream; B toggle; keyboard C unbound; AY B/C Music ownership; no genre cycle in v1.0.
+
+Accepted-state safety commit:
+6d543f480e247a8cc7d5b7996b9f4a0235c8f5a2
+
+Repository freeze branch:
+release/v1.0
+
+Repository freeze tag:
+ncc-command-center-v1.0-physical-verified
+
+Repository freeze commit:
+The commit directly referenced by the annotated repository freeze tag above. Resolve locally with: git rev-parse ncc-command-center-v1.0-physical-verified^{}
+
+License:
+MIT License, Copyright (c) 2026 Derek Leger
+Third-party terms and attribution: see repository-root THIRD_PARTY_NOTICES.md
+
+Documentation:
+docs\engineering\NABU_Command_Center_Master_Production_Engineering_White_Paper_v1.1.docx
+docs\user\NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx
+docs\roadmap\NABU_COMMAND_CENTER_Engineering_White_Paper_Roadmap_2026-08-26_Updated.docx

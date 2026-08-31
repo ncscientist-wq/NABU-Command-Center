@@ -1,0 +1,18 @@
+PHASE 2C KEYBOARD PROVENANCE
+
+Runtime evidence: Owner-tested build NCC-KP-260809-P2C-01 in MAME 0.250,
+NABU nabupc target, on 2026-08-09.
+
+RIGHT  = DEC 240 = HEX F0
+LEFT   = DEC 241 = HEX F1
+UP     = DEC 242 = HEX F2
+DOWN   = DEC 243 = HEX F3
+ENTER  = DEC 013 = HEX 0D
+ESCAPE = DEC 027 = HEX 1B
+
+Observed number keys 1-6 returned ASCII HEX 31-36. They are not used as
+dashboard shortcuts in this milestone.
+
+The production grid is row-major: 0-2 top row, 3-5 bottom row. Horizontal
+movement is bounded within a row; vertical movement changes by three; no edge
+wrap is permitted. M remains the fallback dashboard/back control.

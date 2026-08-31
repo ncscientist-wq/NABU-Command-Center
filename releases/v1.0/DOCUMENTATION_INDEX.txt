@@ -1,0 +1,18 @@
+NABU COMMAND CENTER v1.0 DOCUMENTATION INDEX
+
+Master Production Engineering White Paper v1.1
+Path: docs\engineering\NABU_Command_Center_Master_Production_Engineering_White_Paper_v1.1.docx
+Size: 1,402,973 bytes
+SHA-256: 1E8CC47337A5CBD70A5D095C9CE2EA43CB1567E0B0ED2F80F729099D6FFB2744
+
+User Manual and Operator Guide
+Path: docs\user\NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx
+Size: 7,448,404 bytes
+SHA-256: 5E2413E5A87DB298908E1086DECC1855A7EC615F268FFC2B9852EF229A580997
+
+Updated Engineering White Paper Roadmap
+Path: docs\roadmap\NABU_COMMAND_CENTER_Engineering_White_Paper_Roadmap_2026-08-26_Updated.docx
+Size: 1,043,390 bytes
+SHA-256: 2468B5BC7458CB4E6B7FCBD60BE174AA153675FA43B70AE657A0BF2AC1FC0995
+
+The documents were copied unchanged from the Owner's Notes directory for the local release freeze.

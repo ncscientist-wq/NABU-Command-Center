@@ -1,0 +1,20 @@
+PHASE 2D-A04C API PROVENANCE
+
+Graphics and video declarations:
+<Z88DK_ROOT>\include\graphics.h
+<Z88DK_ROOT>\include\video\tms99x8.h
+
+Used production APIs: vdp_set_mode(mode_2), vdp_color, clg, plot, draw,
+undraw, and circle. vdp_get_reg/vdp_set_reg were audited for A04C but the
+display-blanking experiment was removed in correction build A04C1.
+
+Display transition implementation source inspected:
+z88dk\libsrc\video\tms9918\vdp_get_reg.asm
+z88dk\libsrc\video\tms9918\vdp_set_reg.asm
+z88dk\libsrc\video\tms9918\vdp_set_mode.asm
+
+TMS9918 register 1 bit 6 behavior remains documented evidence only. Production
+A04C1 performs no BL-bit manipulation and reveals the real drawing sequence.
+
+Keyboard, AY, and fixed-64 RetroNET API provenance remains as in A04B.
+No new timer, transport, allocation, sprite, floating-point, or 3D API is used.

@@ -1,0 +1,3 @@
+<NO RESOURCE>
+HTTP STATUS 404
+NOTE resource intentionally missing

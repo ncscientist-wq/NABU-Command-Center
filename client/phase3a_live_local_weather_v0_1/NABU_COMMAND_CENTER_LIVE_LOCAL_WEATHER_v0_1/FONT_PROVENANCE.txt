@@ -1,0 +1,41 @@
+PHASE 2D-A GLOBAL FONT PROVENANCE
+
+SELECTED PROOF FONT
+- 5x7 bitmap glyphs, one-pixel strokes, six-pixel horizontal advance.
+- Stored glyphs: 45 (A-Z, 0-9, and . : / - + % # ( )).
+- Space is supported as a blank advance and consumes no glyph rows.
+- Static table bytes: 315 row bytes + 10-byte punctuation lookup string = 325.
+- Rendering: micro_glyph_row -> micro_char -> installed graphics.h plot().
+- Text is drawn once during screen construction or explicit dirty-region update,
+  never every unchanged main-loop iteration.
+
+CANDIDATE COMPARISON
+- 5x7: selected for A02 because M/W, O/0, I/1, digits, and callsigns have more
+  deliberate differentiation while still fitting approximately 40 characters.
+- 4x6: investigated conceptually as a denser candidate but remains UNVERIFIED;
+  it was not selected before MAME because reducing the five-column glyphs risks
+  telemetry/callsign ambiguity. It may be reconsidered only from runtime need.
+
+INSTALLED PROVENANCE
+- graphics.h declares plot(int,int), mapped to plot_callee.
+- libsrc/video/tms9918/graphics/__tms9918_mode2_plot.asm bounds y at 192 and ORs
+  one pixel into the Graphics II pattern byte through the installed pixel path.
+- video/tms99x8.h declares vdp_color and proven VDP_INK_LIGHT_GREEN/BLACK.
+- No invented font API, direct VRAM address, vdp_vwrite, sprite, or new graphics
+  primitive is used.
+
+COLOR CONSTRAINT
+- Graphics II pattern/color organization is preserved. A02 initializes a single
+  light-green foreground on black and draws glyph/pixel geometry into that
+  uniform scheme, avoiding unverified arbitrary per-pixel color assumptions.
+- Multi-color microtext is not claimed.
+
+READABILITY
+- Static glyph design distinguishes O/0 and I/1 and preserves five-column M/W.
+- Actual MAME readability is NOT TESTED pending Owner Gate A2.
+
+A03 COLOR INTERACTION
+- The A02 5x7 glyph data, 325-byte tables, dimensions, and renderer are unchanged.
+- A03 selects semantic foreground attributes before drawing text; it does not add
+  glyph data or claim multiple colors within one 8x1 Graphics II attribute cell.
+- A03 color readability is NOT TESTED pending Owner Gate A03.

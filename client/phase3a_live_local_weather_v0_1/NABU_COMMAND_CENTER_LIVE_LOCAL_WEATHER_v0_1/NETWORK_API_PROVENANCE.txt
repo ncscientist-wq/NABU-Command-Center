@@ -1,0 +1,16 @@
+Resource: ncc_time.dat in the verified RetroNET Store.
+Open: rn_fileOpen(12, "ncc_time.dat", OPEN_FILE_FLAG_READONLY, 0xff).
+
+Live-data candidate preserves the installed fixed-64 mechanics for both files:
+
+- `ncc_time.dat`: 12-byte filename, read-only open, 64-byte bounded read
+- `ncc_weather.dat`: 15-byte filename, read-only open, 64-byte bounded read
+- declarations: `<Z88DK_ROOT>\include\arch\nabu\retronet.h`
+- implementations: installed `rn_fileOpen.c`, `rn_fileHandleRead.c`, and
+  `rn_fileHandleClose.c` under `libsrc\target\nabu\retronet`
+- open/read are blocking HCCA operations; no installed timeout/cancel mechanism
+- TCP 5816 remains program loading only
+Read: rn_fileHandleRead(handle, buffer, 0, 0, 64).
+Close: rn_fileHandleClose(handle).
+Source baseline: frozen/transport_releases/ncc-transport-v0.2-reliable-64-mame-verified/client/main.c.
+Known limitation retained: Adapter loss during rn_fileOpen may block indefinitely.

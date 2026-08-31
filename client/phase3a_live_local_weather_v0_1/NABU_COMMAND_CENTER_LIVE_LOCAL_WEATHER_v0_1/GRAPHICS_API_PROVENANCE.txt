@@ -1,0 +1,61 @@
+GRAPHICS API EVIDENCE
+
+Header: z88dk/include/video/tms99x8.h
+- enum video_mode includes mode_2.
+- vdp_set_mode(int), vdp_color(int,int,int), MODE2 256x192 constants.
+- Graphics II table constants: pattern generator 0x0000, name 0x1800,
+  color 0x2000, sprite attributes 0x1B00, sprite generator 0x3800.
+
+Header: z88dk/include/graphics.h
+- clg(), draw/undraw, plot, circle declarations.
+
+Installed implementation: z88dk/libsrc/video/tms9918
+- vdp_set_mode.asm dispatches mode 2 to __vdp_mode2.
+- __vdp_mode2.asm clears VRAM, installs the documented Graphics II tables,
+  initializes 6144 color bytes and 6144 pattern bytes.
+- draw_callee.asm routes lines through the installed TMS9918 plotpixel path.
+- Installed +nabu target declares VDP data/latch ports in arch/nabu.h.
+
+Compatibility evidence
+- The local Hello Derek NABU baseline includes video/tms99x8.h and successfully
+  links installed TMS9918 sprite calls; this milestone does not use sprites.
+- Runtime stability of mode_2 and the A01 primitive set is OWNER VERIFIED in
+  MAME 0.250. A02 custom-font readability and redesigned layout are NOT TESTED.
+
+PHASE 2D-A CHECKPOINT A
+- No additional graphics API was introduced.
+- Shared detail frame and ADS-B scope use only the already-proven vdp_set_mode,
+  vdp_color, clg, draw, plot, circle, gotoxy, textcolor, and cputs paths above.
+- Pseudo-3D level: Level 1 dynamic integer vector projection. Five fixed MOCK
+  lateral/depth/altitude tuples are projected at detail-view entry; no float,
+  framebuffer, dynamic allocation, sprite, new VDP address, or new port is used.
+- All generated contact x coordinates are 80..152 and y coordinates are 69..141;
+  marker extents, heading vectors, stems, leaders, frame, and labels remain
+  within the 256x192 display and outside the footer control rows.
+
+PHASE 2D-A A02 GLOBAL VECTOR UI
+- Adds no graphics API. The custom 5x7 font uses the proven plot() path.
+- vdp_color uses installed constants LIGHT_GREEN/BLACK/BLACK; the pixel UI uses
+  one uniform foreground/background scheme and makes no arbitrary pixel-color claim.
+- MAME-safe layout constants are x 8..247 and y 4..183. They are inside the A01
+  region Owner observed without clipping. Physical-TV safety remains INFERRED and
+  NOT PHYSICALLY VERIFIED.
+- Dashboard selection uses eight one-pixel corner ticks; separators are one pixel.
+- ADS-B grid is reduced from 13 to 9 calculated lines. Five contact symbols use
+  directional chevrons, altitude stems, heading vectors, ground ticks, short local
+  leaders, and pre-positioned non-overlapping deterministic labels.
+- No sprite, direct VRAM write, framebuffer, float, malloc, or continuous redraw.
+
+PHASE 2D-A A03 SEMANTIC COLOR PROVENANCE
+- Installed video/tms99x8.h constants used exactly: BLACK 01, MEDIUM_GREEN 02,
+  LIGHT_BLUE 05, CYAN 07, LIGHT_RED 09, DARK_YELLOW 0A, LIGHT_YELLOW 0B,
+  MAGENTA 0D, and WHITE 0F.
+- Installed vdp_color.asm sets __tms9918_attribute. Installed
+  graphics/pixladdr.asm writes that attribute to the Graphics II color byte on
+  plot/draw operations. One color byte governs an 8-pixel pattern row; arbitrary
+  independent pixel colors inside that cell are not supported by this path.
+- A03 uses region separation and draw ordering: secondary grid first, normal
+  targets second, selected target last. Dashboard status/build fields occupy
+  distinct cells; previous panel art is redrawn before a moved highlight.
+- No new graphics API, direct VRAM access, sprite, framebuffer, or display mode.
+- A03 applies color only to dashboard and ADS-B. Other pages remain unchanged.

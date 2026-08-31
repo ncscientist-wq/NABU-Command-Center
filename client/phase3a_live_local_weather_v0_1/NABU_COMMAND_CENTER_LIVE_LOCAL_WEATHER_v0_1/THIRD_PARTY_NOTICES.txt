@@ -1,0 +1,12 @@
+NABU COMMAND CENTER - THIRD-PARTY NOTICES
+
+z88dk 2.4
+The project is compiled and linked with z88dk and its NABU target libraries.
+The installed distribution states that z88dk is distributed under the
+Clarified Artistic License unless otherwise stated in the appropriate file.
+Installed license evidence:
+<Z88DK_ROOT>\LICENSE
+
+NABU, TMS9918, Z80, MAME, and other third-party names are trademarks or names
+of their respective owners. No third-party artwork, melody, or browser asset is
+incorporated into the production source by this milestone.

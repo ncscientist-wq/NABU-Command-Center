@@ -1,0 +1,3 @@
+<NO RESOURCE>
+HTTP STATUS 503
+NOTE publisher offline

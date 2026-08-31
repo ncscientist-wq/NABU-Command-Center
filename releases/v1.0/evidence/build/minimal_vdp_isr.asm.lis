@@ -1,0 +1,41 @@
+<BUILD_TEMP>/zcc000013B47A1B3.asm:
+     1                          MODULE minimal_vdp_isr_asm
+     2                          LINE 0, "minimal_vdp_isr.asm"
+minimal_vdp_isr.asm:
+                                
+     1                          SECTION code_user
+     2                          
+     3                          PUBLIC _ncc_install_minimal_vdp_isr
+     4                          PUBLIC ncc_minimal_vdp_isr
+     5                          
+     6                          EXTERN _clock_frame_counter
+     7                          EXTERN __tms9918_status_register
+     8                          
+     9                          ; Installed z88dk places NABU's eight two-byte IM2 handlers at I:0000.
+    10                          ; Vector 6 is the VDP handler, hence table offset 6.
+    11                          _ncc_install_minimal_vdp_isr:
+    12  0000  f3                    di
+    13  0001  ed57                  ld a,i
+    14  0003  67                    ld h,a
+    15  0004  2e06                  ld l,6
+    16  0006  110e00                ld de,ncc_minimal_vdp_isr
+    17  0009  73                    ld (hl),e
+    18  000a  23                    inc hl
+    19  000b  72                    ld (hl),d
+    20  000c  fb                    ei
+    21  000d  c9                    ret
+    22                          
+    23                          ; Direct bounded frame ISR: acknowledge VDP status, retain the installed
+    24                          ; library status shadow, count one frame, return. No callback dispatcher.
+    25                          ncc_minimal_vdp_isr:
+    26  000e  f3                    di
+    27  000f  f5                    push af
+    28  0010  dba1                  in a,($A1)
+    29  0012  320000                ld (__tms9918_status_register),a
+    30  0015  3a0000                ld a,(_clock_frame_counter)
+    31  0018  3c                    inc a
+    32  0019  320000                ld (_clock_frame_counter),a
+    33  001c  f1                    pop af
+    34  001d  fb                    ei
+    35  001e  c9                    ret
+    36                          

@@ -1,0 +1,13 @@
+Product: NABU Command Center
+Creator: Derek Leger
+Copyright: Copyright (c) 2026 Derek Leger. All rights reserved.
+Product Version: UNASSIGNED
+Development Milestone: Phase 3A-01A Live Atomic Clock First Proof
+Working Project Version: v0.9
+Build ID: NCC-AC-260811-P3A-01AR1
+Target: NABU Personal Computer
+Toolchain: z88dk 2.4 / +nabu
+MAME: 0.250 / nabupc
+Transport: fixed-64 RetroNET Store path
+MAME Status: VERIFIED
+Physical NABU Status: NOT TESTED

@@ -1,0 +1,8 @@
+NABU Command Center
+Created by Derek Leger
+
+Copyright (c) 2026 Derek Leger.
+All rights reserved.
+
+Third-party software, hardware, trademarks, documentation, tools, and reference
+materials remain subject to their respective owners and licenses.

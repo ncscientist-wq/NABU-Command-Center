@@ -1,0 +1,21 @@
+NABU COMMAND CENTER v1.0 ACCEPTANCE STATUS
+
+BUILD_ID: NCC-SPLASH-260826-LV2
+Compilation: VERIFIED
+Linking: VERIFIED
+000001.bin generation: VERIFIED
+000001.NABU generation: VERIFIED
+Byte identity: VERIFIED
+MAME execution: OWNER VERIFIED
+Weather maximized-view correction: VERIFIED
+Splash: VERIFIED
+Task Manager: VERIFIED
+Integrated v1.0 modules: OWNER VERIFIED
+Physical NABU transfer/execution: OWNER VERIFIED
+Physical GUI/runtime: OWNER VERIFIED
+
+Endurance:
+Golden Transport bounded qualification: 5,000 / 5,000 reads, retained historical evidence.
+Final integrated LV2 long-run duration: no separate duration claimed; OWNER runtime acceptance only.
+
+This record distinguishes MAME acceptance from physical NABU acceptance. Both apply to the exact 59,501-byte LV2 artifact identified in SHA256SUMS.txt.

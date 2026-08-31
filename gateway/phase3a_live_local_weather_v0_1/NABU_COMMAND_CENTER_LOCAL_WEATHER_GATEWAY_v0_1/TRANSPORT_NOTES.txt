@@ -1,0 +1,59 @@
+TRANSPORT NOTES
+
+EVIDENCE STATUS
+
+Official current z88dk documentation identifies:
+    <arch/nabu/retronet.h>
+
+Official/historical NABU-LIB release notes identify remote file and URL support,
+including names such as:
+    rn_handleFileRead()
+    rn_handleFileReadSeq()
+    rn_handleSeek()
+
+Secondary source inspection reports a function called rn_fileOpen.
+
+The exact declarations, parameter types, return meanings, close function,
+blocking behavior, and buffer behavior in Derek's installed z88dk 2.4 tree were
+not available to this package generator.
+
+Therefore:
+- No RetroNET function is called by the generated NABU source.
+- The Store path is a provisional INFERRED recommendation.
+- The HTTP path remains available in the gateway for later comparison.
+- The exact installed header audit must be collected before enabling transport.
+
+PATH COMPARISON
+
+STORE MAILBOX
+
+Strengths:
+- Gateway can atomically replace one local file.
+- No HTTP response caching between gateway and Internet Adapter.
+- Simple missing/empty/truncated failure injection.
+- Same gateway resource can serve MAME and a physical NABU through the Adapter.
+
+Unknowns:
+- Actual configured Store path.
+- Installed Adapter version.
+- Exact NABU open/read/close declarations.
+- Filename/path rules in the installed version.
+- Blocking and timeout behavior.
+
+HTTP THROUGH INTERNET ADAPTER
+
+Strengths:
+- Official historical material confirms HTTP/HTTPS retrieval and caching.
+- Gateway can bind to loopback and log each request.
+
+Risks/unknowns:
+- Internet Adapter cache freshness and invalidation behavior vary by version.
+- Exact HTTP request API and query-slot behavior must be verified.
+- A changing resource may require cache-busting or Adapter cache controls.
+- Loopback as seen by the Adapter depends on where the Adapter runs.
+
+PROVISIONAL RECOMMENDATION
+
+Path B, Store mailbox: INFERRED lowest risk for the first changing-record proof.
+Do not mark selected/verified until the local API audit and Adapter version are
+recorded.

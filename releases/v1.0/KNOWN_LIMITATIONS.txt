@@ -1,0 +1,11 @@
+NABU COMMAND CENTER v1.0 KNOWN LIMITATIONS
+
+1. The measured static-to-stack address-space margin is 646 bytes (BSS_END $FC7A to initial SP $FF00). This is not described as free RAM.
+2. Production Help is the existing single-page H view. Dense multi-page Help was not implemented because of the resource boundary and unverified additional key-code requirements.
+3. Music is one curated production stream. B toggles Music; keyboard C is unbound; AY channels B/C are Music-owned during normal playback while channel A remains cue-owned. There is no v1.0 genre cycle.
+4. BUILD.BAT's console echo still names an older engineering build, but the accepted source, listing, artifacts, and visible footer identify NCC-SPLASH-260826-LV2. The accepted artifacts were not rebuilt for this metadata-only freeze.
+5. No final integrated endurance duration beyond the retained Golden Transport 5,000/5,000 qualification is claimed.
+6. External data providers and Internet connectivity remain host/Gateway dependencies. The NABU retains bounded last-known-good module state where implemented.
+7. Third-party components, preserved reference material, services, and data remain subject to their own terms; see THIRD_PARTY_NOTICES.md at the repository root.
+
+LICENSE: MIT License, Copyright (c) 2026 Derek Leger

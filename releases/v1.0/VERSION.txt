@@ -1,0 +1,6 @@
+Product: NABU Command Center
+Version: 1.0
+BUILD_ID: NCC-SPLASH-260826-LV2
+Artifact size: 59,501 bytes each
+Artifact SHA-256: 5D27DFBB3ED8DCD96AF828CECC7550EF546B07C10509E20A71FECFCF0CC89087
+Release type: Owner-authorized local freeze
