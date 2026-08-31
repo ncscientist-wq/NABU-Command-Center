@@ -4,6 +4,17 @@ NABU Command Center is a live information and diagnostics application for the NA
 
 This is the sanitized publication repository derived from licensed release commit `75390dc68b2b2dfa3143d8e08d48dfb9fc946fe3`. It contains the production NABU client, production Gateway, focused tests and build scripts, release documentation, and the exact owner-accepted v1.0 artifacts.
 
+## Quick Start — Running NABU Command Center
+
+1. Use the accepted boot image at [`releases/v1.0/artifacts/000001.NABU`](releases/v1.0/artifacts/000001.NABU).
+2. In [`gateway/phase3a_live_local_weather_v0_1/NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1`](gateway/phase3a_live_local_weather_v0_1/NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1), copy `config.example.ini` to `command_center.ini`. Set `store_path` to the Store directory used by your NABU Internet Adapter.
+3. Install the required Gateway dependency once: `py -3 -m pip install -r requirements-music.txt` (or `python -m pip install -r requirements-music.txt`).
+4. Start the production Gateway by double-clicking `START_COMMAND_CENTER_GATEWAY.BAT`. Keep it running; it publishes the live service files into the Internet Adapter Store.
+5. Use the NABU Internet Adapter to make `000001.NABU` available as the Command Center boot image. Start the NABU or emulator, select Command Center, and boot it.
+6. A successful connection reaches the Command Center dashboard with `NET LIVE`; live modules then consume the companion Gateway data.
+
+For complete setup, controls, and operating guidance, see the [NABU Command Center v1.0 User Manual and Operator Guide](docs/user/NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx).
+
 ## Accepted artifact
 
 - Build ID: `NCC-SPLASH-260826-LV2`
