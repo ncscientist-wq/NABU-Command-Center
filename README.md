@@ -6,12 +6,13 @@ This is the sanitized publication repository derived from licensed release commi
 
 ## Quick Start — Running NABU Command Center
 
-1. Use the accepted boot image at [`releases/v1.0/artifacts/000001.NABU`](releases/v1.0/artifacts/000001.NABU).
-2. In [`gateway/phase3a_live_local_weather_v0_1/NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1`](gateway/phase3a_live_local_weather_v0_1/NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1), copy `config.example.ini` to `command_center.ini`. Set `store_path` to the Store directory used by your NABU Internet Adapter.
-3. Install the required Gateway dependency once: `py -3 -m pip install -r requirements-music.txt` (or `python -m pip install -r requirements-music.txt`).
-4. Start the production Gateway by double-clicking `START_COMMAND_CENTER_GATEWAY.BAT`. Keep it running; it publishes the live service files into the Internet Adapter Store.
-5. Use the NABU Internet Adapter to make `000001.NABU` available as the Command Center boot image. Start the NABU or emulator, select Command Center, and boot it.
-6. A successful connection reaches the Command Center dashboard with `NET LIVE`; live modules then consume the companion Gateway data.
+1. Download the project to your PC from GitHub using **Code → Download ZIP**, then extract it. Git users may instead run `git clone https://github.com/ncscientist-wq/NABU-Command-Center.git`.
+2. Use the accepted boot image at [`releases/v1.0/artifacts/000001.NABU`](releases/v1.0/artifacts/000001.NABU).
+3. In [`gateway/phase3a_live_local_weather_v0_1/NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1`](gateway/phase3a_live_local_weather_v0_1/NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWAY_v0_1), copy `config.example.ini` to `command_center.ini`. Set `store_path` to the Store directory used by your NABU Internet Adapter.
+4. Install the required Gateway dependency once: `py -3 -m pip install -r requirements-music.txt` (or `python -m pip install -r requirements-music.txt`).
+5. Start the production Gateway by double-clicking `START_COMMAND_CENTER_GATEWAY.BAT`. Keep it running; it publishes the live service files into the Internet Adapter Store.
+6. Use the NABU Internet Adapter to make `000001.NABU` available as the Command Center boot image. Start the NABU or emulator, select Command Center, and boot it.
+7. A successful connection reaches the Command Center dashboard with `NET LIVE`; live modules then consume the companion Gateway data.
 
 For complete setup, controls, and operating guidance, see the [NABU Command Center v1.0 User Manual and Operator Guide](docs/user/NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx).
 
