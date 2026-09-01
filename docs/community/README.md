@@ -21,8 +21,8 @@ The larger vision is a one-stop NABU terminal spanning weather, news, space, sei
 
 ## Project documents
 
-- [Community Release White Paper and Publication Update](NABU_Command_Center_v1.0_Community_Release_White_Paper_and_Publication_Update.docx)
-- [Engineering White Paper Roadmap](../roadmap/NABU_COMMAND_CENTER_Engineering_White_Paper_Roadmap_2026-08-26_Updated.docx)
+- [Community Release White Paper and Publication Update](NABU_Command_Center_v1.0_Community_Release_White_Paper_Public_MIT_No_Physical_Photos.docx)
+- [Engineering White Paper Roadmap](../roadmap/NABU_COMMAND_CENTER_Engineering_White_Paper_Roadmap_2026-08-26_Public_MIT_No_Physical_Photos.docx)
 - [User Manual and Operator Guide](../user/NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx)
 
 Future work should be developed separately from the verified v1.0 release and should preserve its accepted artifact and provenance.

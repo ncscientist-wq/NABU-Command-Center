@@ -14,7 +14,7 @@ gateway\phase3a_live_local_weather_v0_1\NABU_COMMAND_CENTER_LOCAL_WEATHER_GATEWA
 Documentation:
 docs\engineering\NABU_Command_Center_Master_Production_Engineering_White_Paper_v1.1.docx
 docs\user\NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx
-docs\roadmap\NABU_COMMAND_CENTER_Engineering_White_Paper_Roadmap_2026-08-26_Updated.docx
+docs\roadmap\NABU_COMMAND_CENTER_Engineering_White_Paper_Roadmap_2026-08-26_Public_MIT_No_Physical_Photos.docx
 
 No remote publication is implied.
 
