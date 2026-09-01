@@ -14,7 +14,7 @@ This is the sanitized publication repository derived from licensed release commi
 6. Use the NABU Internet Adapter to make `000001.NABU` available as the Command Center boot image. Start the NABU or emulator, select Command Center, and boot it.
 7. A successful connection reaches the Command Center dashboard with `NET LIVE`; live modules then consume the companion Gateway data.
 
-For complete setup, controls, and operating guidance, see the [NABU Command Center v1.0 User Manual and Operator Guide](docs/user/NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.docx).
+For complete setup, controls, and operating guidance, see the [NABU Command Center v1.0 User Manual and Operator Guide](docs/user/NABU_Command_Center_v1.0_User_Manual_and_Operator_Guide.pdf).
 
 ## Accepted artifact
 
