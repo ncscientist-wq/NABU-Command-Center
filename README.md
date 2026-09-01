@@ -40,3 +40,7 @@ Use `config.example.ini` as the configuration template. Local configuration, cac
 Derek-owned NABU Command Center material is licensed under the [MIT License](LICENSE), Copyright (c) 2026 Derek Leger. Third-party boundaries and attribution are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). NABU-LIB is referenced for provenance but is not redistributed; see [NABU_LIB_REFERENCE.md](NABU_LIB_REFERENCE.md).
 
 See [PUBLICATION_PROVENANCE.md](PUBLICATION_PROVENANCE.md) for the relationship between this sanitized repository and the private frozen engineering repository.
+
+## Community development
+
+See the [Community Development Roadmap](docs/community/README.md) for future module ideas and links to the community release paper, engineering roadmap, and full user manual.
